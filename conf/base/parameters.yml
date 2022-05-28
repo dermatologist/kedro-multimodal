@@ -1,2 +1,3 @@
 TARGET: dm
-DROP: ['name']
+DROP: ['name', 'id']
+ID: id

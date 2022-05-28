@@ -1,5 +1,5 @@
-name,age,gender,zip,bp,dm
-John,23,Male,12345,80,1
-Jane,54,Female,23123,90,0
-Mickey,11,Male,21234,100,1
-Minney,9,Female,12312,120,0
+id,name,age,gender,zip,bp,dm
+img1,John,23,Male,12345,80,1
+img2,Jane,54,Female,23123,90,0
+img3,Mickey,11,Male,21234,100,1
+img4,Minney,9,Female,12312,120,0
