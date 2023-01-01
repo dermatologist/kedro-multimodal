@@ -1,7 +1,7 @@
 [tool.kedro]
 package_name = "kedro_tf_multimodal"
 project_name = "Kedro TF Multimodal"
-project_version = "0.18.1"
+project_version = "0.18.4"
 
 [tool.isort]
 multi_line_output = 3
