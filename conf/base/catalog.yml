@@ -3,9 +3,13 @@
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
 
-tabular_data:
+text_data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/test_report.csv
+
+tabular_model_saved:
+  type: tensorflow.TensorFlowModelDataset
+  filepath: data/06_models/tabular_model
 
 chexnet_weights:
   type: kedro_tf_image.extras.datasets.tf_model_weights.TfModelWeights
@@ -14,7 +18,7 @@ chexnet_weights:
   load_args:
     class_num: 14
 
-text_data:
+tabular_data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/test_dataset.csv
 
@@ -27,11 +31,6 @@ bert_model_saved:
   type: tensorflow.TensorFlowModelDataset
   filepath: data/06_models/bert-tf
 
-image_data:
-  type: PartitionedDataSet
-  dataset: pillow.ImageDataSet
-  path: data/01_raw/imageset
-  filename_suffix: ".jpg"
 
 fusion_model:
   type: tensorflow.TensorFlowModelDataset
