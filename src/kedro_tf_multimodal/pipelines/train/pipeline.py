@@ -24,6 +24,11 @@ _fusion_pipeline = create_fusion_pipeline(**inputs)
 fusion_model = modular_pipeline(pipe=_fusion_pipeline, outputs={
                                 "fusion_model": "fusion_model"})
 
+train = {"parameters": "params:train", "model": "fusion_model", "outputs": "trained_model",
+         "bert_data": "text_data", "tabular_data": "tabular_data", "image_data": "image_data"}
+
+train_pipeline = create_train_pipeline(**train)
+
 def create_pipeline(**kwargs) -> Pipeline:
-    return bert_model + tabular_model + fusion_model
+    return bert_model + tabular_model + fusion_model + train_pipeline
 

@@ -11,6 +11,17 @@ tabular_model_saved:
   type: tensorflow.TensorFlowModelDataset
   filepath: data/06_models/tabular_model
 
+image_data:
+  type: PartitionedDataSet
+  dataset: {
+      "type": "kedro_tf_image.extras.datasets.tf_image_dataset.TfImageDataSet",
+      "imagedim": 224,
+      "preprocess_input": "tensorflow.keras.applications.resnet50.preprocess_input"
+  }
+  path: data/01_raw/imageset
+  filename_suffix: ".jpg"
+
+
 chexnet_weights:
   type: kedro_tf_image.extras.datasets.tf_model_weights.TfModelWeights
   filepath: data/03_primary/brucechou1983_CheXNet_Keras_0.3.0_weights.h5
@@ -34,21 +45,13 @@ bert_model_saved:
 
 fusion_model:
   type: tensorflow.TensorFlowModelDataset
-  filepath: data/07_model_output/fusion.h5
-  load_args:
-    compile: True
-  save_args:
-    include_optimizer: True
-    overwrite: True
-    save_format: h5
+  filepath: data/07_model_output/fusion
+
 
 trained_model:
   type: tensorflow.TensorFlowModelDataset
   filepath: data/07_model_output/train
-  save_args:
-    include_optimizer: True
-    overwrite: True
-    save_format: h5
+
 
 datasetinmemory:
   type: MemoryDataSet
