@@ -5,6 +5,18 @@
 
 tabular_data:
   type: pandas.CSVDataSet
+  filepath: data/01_raw/test_report.csv
+
+chexnet_weights:
+  type: kedro_tf_image.extras.datasets.tf_model_weights.TfModelWeights
+  filepath: data/03_primary/brucechou1983_CheXNet_Keras_0.3.0_weights.h5
+  architecture: DenseNet121
+  load_args:
+    class_num: 14
+
+
+text_data:
+  type: pandas.CSVDataSet
   filepath: data/01_raw/test_dataset.csv
 
 image_data:
@@ -35,7 +47,7 @@ trained_model:
     include_optimizer: True
     overwrite: True
     save_format: h5
-    
+
 datasetinmemory:
   type: MemoryDataSet
   copy_mode: assign
