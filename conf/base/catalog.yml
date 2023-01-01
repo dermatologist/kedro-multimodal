@@ -14,21 +14,24 @@ chexnet_weights:
   load_args:
     class_num: 14
 
-
 text_data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/test_dataset.csv
+
+bert_model:
+  type: kedro_tf_text.extras.datasets.bert_model_download.BertModelDownload
+  preprocessor_url: "https://tfhub.dev/tensorflow/bert_en_uncased_preprocess/3"
+  encoder_url: "https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/4"
+
+bert_model_saved:
+  type: tensorflow.TensorFlowModelDataset
+  filepath: data/06_models/bert-tf
 
 image_data:
   type: PartitionedDataSet
   dataset: pillow.ImageDataSet
   path: data/01_raw/imageset
   filename_suffix: ".jpg"
-
-chexnet_model:
-  type: tensorflow.TensorFlowModelDataset
-  filepath: data/06_models/densenet-chexnet
-
 
 fusion_model:
   type: tensorflow.TensorFlowModelDataset
