@@ -1,12 +1,22 @@
-black~=22.0
-flake8>=3.7.9, <4.0
-ipython>=7.31.1, <8.0
-isort~=5.0
-jupyter~=1.0
-jupyterlab~=3.0
-kedro==0.18.1
-kedro-telemetry~=0.2.0
-nbstripout~=0.4
-pytest-cov~=3.0
-pytest-mock>=1.7.1, <2.0
-pytest~=6.2
+black
+flake8
+ipython
+isort
+jupyter
+jupyterlab
+kedro==0.18.4
+nbstripout
+pytest-cov
+pytest-mock
+pytest
+tensorflow
+pandas
+nltk
+kedro_tf_text @ git+https://github.com/dermatologist/kedro-tf-text.git@develop
+kedro_tf_image @ git+https://github.com/dermatologist/kedro-tf-image.git@develop
+kedro_tf_utils @ git+https://github.com/dermatologist/kedro-tf-utils.git@develop
+python-json-logger
+Pillow
+scikit-learn
+tensorflow-text
+gensim
