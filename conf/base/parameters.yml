@@ -11,10 +11,10 @@ fusion:
   train_embedding: True  # Keep it same as EARLY_FUSION
   DENSE_LAYER: 128
   EPOCHS: 10
-  NCLASSES: 3
+  NCLASSES: 1
 bert_model:
   MAX_LENGTH: 40
-  NCLASSES: 3
+  NCLASSES: 1
   REPORT_FIELD: report
   ID: id
   TARGET: dm

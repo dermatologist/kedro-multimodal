@@ -1,5 +1,9 @@
 # Kedro TF Multimodal
 
+
+## Troubleshoot
+
+* *import tensorflow_text as text* is required in pipeline_registry to avoid this error: Op type not registered 'CaseFoldUTF8' in binary running on xxxx
 ## Overview
 
 This is your new Kedro project, which was generated using `Kedro 0.18.1`.

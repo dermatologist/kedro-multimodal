@@ -30,5 +30,7 @@ train = {"parameters": "params:train", "model": "fusion_model", "outputs": "trai
 train_pipeline = create_train_pipeline(**train)
 
 def create_pipeline(**kwargs) -> Pipeline:
-    return bert_model + tabular_model + fusion_model + train_pipeline
+    return bert_model + tabular_model + fusion_model
 
+def create_train_pipeline(**kwargs) -> Pipeline:
+    return train_pipeline

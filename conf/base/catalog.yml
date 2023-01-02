@@ -27,7 +27,7 @@ chexnet_weights:
   filepath: data/03_primary/brucechou1983_CheXNet_Keras_0.3.0_weights.h5
   architecture: DenseNet121
   load_args:
-    class_num: 14
+    class_num: 1
 
 tabular_data:
   type: pandas.CSVDataSet
