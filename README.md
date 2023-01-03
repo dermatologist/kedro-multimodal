@@ -1,10 +1,13 @@
 # Kedro TF Multimodal :hammer:
 
-This is a template for multi-modal machine learning in healthcare using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and image using various fusion methods. It works in [Kubeflow](https://www.kubeflow.org) and in [Vertex AI](https://cloud.google.com/vertex-ai). Refer [default pipeline](src/kedro_tf_multimodal/pipelines/train/pipeline.py) for usage instructions. The required pipelines below are in [requirements.txt](src/requirements.txt). More details on the components are in their respective repositories below:
+This is a template for multi-modal machine learning in healthcare using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and image using various fusion methods. It works in [Kubeflow](https://www.kubeflow.org) and in [Vertex AI](https://cloud.google.com/vertex-ai). **Refer [default pipeline](src/kedro_tf_multimodal/pipelines/train/pipeline.py) for usage examples.** The required pipelines below are in [requirements.txt](src/requirements.txt). More details on the components are in their respective repositories below:
 
 * [kedro-tf-image](https://github.com/dermatologist/kedro-tf-image)
 * [kedro-tf-text](https://github.com/dermatologist/kedro-tf-text)
 * [kedro-tf-utils](https://github.com/dermatologist/kedro-tf-utils)
+
+Also see [catalogue](conf/base/catalog.yml) and [parameters](conf/base/parameters.yml)
+
 ## Troubleshoot
 * Downloaded BERT models will not copy vocab.txt in assets folder to the newly created fusion model. This has to be manually copied.
 * The class_num in TfModelWeights must be equal to to NCLASSES during training. Otherwise it throws an error:  Tensorflow estimator ValueError: logits and labels must have the same shape ((?, 1) vs (?,))
