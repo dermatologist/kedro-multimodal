@@ -161,3 +161,4 @@ venv.bak/
 
 !data/01_raw/test_dataset.csv
 !data/01_raw/imageset/*.jpg
+!data/01_raw/test_report.csv

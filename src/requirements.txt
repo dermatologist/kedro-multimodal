@@ -20,3 +20,5 @@ Pillow
 scikit-learn
 tensorflow-text
 gensim
+opencv-python
+matplotlib
