@@ -19,7 +19,7 @@ tabular_model = modular_pipeline(pipe=tabular_model_pipeline, outputs={"tabular_
 
 chexnet_model_pipeline = create_classification_layer()
 
-chexnet_model = modular_pipeline(pipe=chexnet_model_pipeline, parameters={"parameters": "parameters"}) ## chexnet_weights -> chexnet_model
+chexnet_model = modular_pipeline(pipe=chexnet_model_pipeline, parameters={"params:add_layer": "params:fusion"}) ## chexnet_weights -> chexnet_model
 
 inputs = {"parameters": "params:fusion", "bert_model": "bert_model_saved", "tabular_model": "tabular_model_saved",
           "image_model": "chexnet_model"}

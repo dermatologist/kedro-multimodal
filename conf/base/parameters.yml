@@ -26,4 +26,4 @@ train:
   ID: id
   TARGET: dm
   DROP: ["name", "id"]
-NCLASSES: 1
+  
