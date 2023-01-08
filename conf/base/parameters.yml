@@ -21,9 +21,8 @@ bert_model:
   DROP: ["name", "id"]
 train:
   MAX_LENGTH: 40
-  NCLASSES: 3
+  NCLASSES: 1
   REPORT_FIELD: report
   ID: id
   TARGET: dm
   DROP: ["name", "id"]
-  
