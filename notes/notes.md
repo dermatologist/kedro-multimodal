@@ -1,44 +1,50 @@
-[<KerasTensor: shape=(None, 2) dtype=float32 (created by layer 'input_categorical_vars_all')>, <KerasTensor: shape=(None, 1) dtype=float32 (created by layer 'input_continuous_all')>, <KerasTensor: shape=(None, 224, 224, 3) dtype=float32 (created by layer 'input_1')>]
+
+```
+saved_model_cli show --all --dir data/07_model_output/train/
+saved_model_cli show --all --dir data/08_reporting/
+```
 
 
-[<KerasTensor: shape=(None, 3) dtype=float32 (created by layer 'normalization')>]
-[<KerasTensor: shape=(None, 2) dtype=float32 (created by layer 'input_categorical_vars_all')>, <KerasTensor: shape=(None, 1) dtype=float32 (created by layer 'input_continuous_all')>, <KerasTensor: shape=(None, 224, 224, 3) dtype=float32 (created by layer 'input_1')>]
+MetaGraphDef with tag-set: 'serve' contains the following SignatureDefs:
 
+signature_def['__saved_model_init_op']:
+  The given SavedModel SignatureDef contains the following input(s):
+  The given SavedModel SignatureDef contains the following output(s):
+    outputs['__saved_model_init_op'] tensor_info:
+        dtype: DT_INVALID
+        shape: unknown_rank
+        name: NoOp
+  Method name is:
 
-<KerasTensor: shape=(None, 1) dtype=float32 (created by layer 'age')>, <KerasTensor: shape=(None, 1) dtype=float32 (created by layer 'bp')>, <KerasTensor: shape=(None, 1) dtype=string (created by layer 'gender')>, <KerasTensor: shape=(None, 1) dtype=float32 (created by layer 'zip')>, <KerasTensor: shape=(None, 224, 224, 3) dtype=float32 (created by layer 'input_1')>
-
-
-
-
-
-    # imgs = tf.convert_to_tensor(_imgs, dtype=tf.float32)
-
-    # tabular = tf.convert_to_tensor(preprocessed_inputs, dtype=tf.float32)
-    # print(preprocessed_inputs_cat)
-    # x = tf.concat([csv_features_dict, imgs], axis=1)
-    # print([csv_features_dict, _imgs])
-
-    # print(multi_modal.summary)
-
-    # print(np.shape(_imgs))
-    # print(np.shape(csv_features_dict))
-    # dataset = tf.data.Dataset.from_tensor_slices(csv_features_dict)
-    # print(multi_modal.inputs)
-    # print(inputs)
-    # print(categorical_inputs)
-    # print(numeric_inputs)
-    print(multi_modal.inputs)
-
-
-
-
-
-
-
-    # for name, value in csv_features_dict.items():
-    #     print(name, value.shape)
-
-
-    # Split the dataset for text
-    # X_train, X_test, y_train, y_test = train_test_split(
-    #     text_dataset, y, test_size=0.2, random_state=42)
+signature_def['serving_default']:
+  The given SavedModel SignatureDef contains the following input(s):
+    inputs['age'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, 1)
+        name: serving_default_age:0
+    inputs['bp'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, 1)
+        name: serving_default_bp:0
+    inputs['gender'] tensor_info:
+        dtype: DT_STRING
+        shape: (-1, 1)
+        name: serving_default_gender:0
+    inputs['input_1'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, 224, 224, 3)
+        name: serving_default_input_1:0
+    inputs['text_input_for_bert'] tensor_info:
+        dtype: DT_STRING
+        shape: (-1)
+        name: serving_default_text_input_for_bert:0
+    inputs['zip'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, 1)
+        name: serving_default_zip:0
+  The given SavedModel SignatureDef contains the following output(s):
+    outputs['fusion_1'] tensor_info:
+        dtype: DT_FLOAT
+        shape: (-1, 1)
+        name: StatefulPartitionedCall_2:0
+  Method name is: tensorflow/serving/predict

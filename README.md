@@ -6,12 +6,11 @@ This is a template for multi-modal machine learning in healthcare using the [Ked
 * [kedro-tf-text](https://github.com/dermatologist/kedro-tf-text)
 * [kedro-tf-utils](https://github.com/dermatologist/kedro-tf-utils)
 
-Also see [catalogue](conf/base/catalog.yml) and [parameters](conf/base/parameters.yml)
+Also see [catalogue](conf/base/catalog.yml) and [parameters](conf/base/parameters/train.yml)
 
 ## Troubleshoot
 * Downloaded BERT models will not copy vocab.txt in assets folder to the newly created fusion model. This has to be manually copied.
 * The class_num in TfModelWeights must be equal to to NCLASSES during training. Otherwise it throws an error:  Tensorflow estimator ValueError: logits and labels must have the same shape ((?, 1) vs (?,))
-* **The number of prediction classes should be equal for all models**. Otherwise leads to the above error
 * *import tensorflow_text as text* is required in pipeline_registry to avoid this error: Op type not registered 'CaseFoldUTF8' in binary running on xxxx
 * Inconsistent NCLASSES leads to **ValueError: `logits` and `labels` must have the same shape, received ((None, 3) vs (None, 1)).**
 

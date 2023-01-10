@@ -3,3 +3,23 @@
 #
 # Documentation for this file format can be found in "Parameters"
 # Link: https://kedro.readthedocs.io/en/0.18.1/kedro_project_setup/configuration.html#parameters
+multimodal:
+  MAX_NUM_WORDS: 15000
+  EMBEDDING_DIM: 300
+  MAX_SEQ_LENGTH: 140
+  REPORT_FIELD: report
+  ID_FIELD: id
+  ID: id
+  TARGET: dm # The header of the dependant variable
+  DROP: ["name", "id"]
+  EARLY_FUSION: True
+  train_embedding: True  # Keep it same as EARLY_FUSION
+  DENSE_LAYER: 128
+  EPOCHS: 2
+  NCLASSES: 1
+  MAX_LENGTH: 40
+  SERVING: data/08_reporting/train/
+  EVALUATE: False
+  BATCH_SIZE: 4
+  CALLBACKS: False
+  WORKERS: 4
