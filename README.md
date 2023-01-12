@@ -17,6 +17,12 @@ The required pipelines are in [requirements.txt](src/requirements.txt). More det
 * [kedro-tf-text](https://github.com/dermatologist/kedro-tf-text)
 * [kedro-tf-utils](https://github.com/dermatologist/kedro-tf-utils)
 
+## You can visualize pipelines using [kedro-viz](https://github.com/kedro-org/kedro-viz). See the default pipeline below.
+* Please note that you can build any multi-modal architecture!
+
+
+[![kedro-viz](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/kedro-viz.png)](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/kedro-viz.png)
+
 ## Troubleshoot
 * Downloaded BERT models will not copy vocab.txt in assets folder to the newly created fusion model. This has to be manually copied.
 * The class_num in TfModelWeights must be equal to to NCLASSES during training. Otherwise it throws an error:  Tensorflow estimator ValueError: logits and labels must have the same shape ((?, 1) vs (?,))
