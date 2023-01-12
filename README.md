@@ -2,13 +2,19 @@
 
 [![kedro-tf-text](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/multimodal.drawio.svg)](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/multimodal.drawio.svg)
 
-This is a template for multi-modal machine learning in healthcare using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and image using various fusion methods. It works in [Kubeflow](https://www.kubeflow.org) and in [Vertex AI](https://cloud.google.com/vertex-ai). **Refer [default pipeline](src/kedro_tf_multimodal/pipelines/train/pipeline.py) for usage examples.** The required pipelines below are in [requirements.txt](src/requirements.txt). More details on the components are in their respective repositories below:
+This is a template for multi-modal machine learning in healthcare using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and image using various fusion methods. It works in [Kubeflow](https://www.kubeflow.org) and in [Vertex AI](https://cloud.google.com/vertex-ai).
 
+## Usage
+* If you are not familiar with the [Kedro](https://kedro.org/) platform, please read the [overview](#overview) below.
+* Refer [default pipeline](src/kedro_tf_multimodal/pipelines/train/pipeline.py) for usage examples.
+* Refer [sample data](/data/01_raw/) for data format.
+* Refer [catalogue](conf/base/catalog.yml) for inputs and outputs
+* See [parameters](conf/base/parameters/train.yml) that can be tweaked.
+
+The required pipelines are in [requirements.txt](src/requirements.txt). More details on the components are in their respective repositories:
 * [kedro-tf-image](https://github.com/dermatologist/kedro-tf-image)
 * [kedro-tf-text](https://github.com/dermatologist/kedro-tf-text)
 * [kedro-tf-utils](https://github.com/dermatologist/kedro-tf-utils)
-
-Also see [catalogue](conf/base/catalog.yml) and [parameters](conf/base/parameters/train.yml)
 
 ## Troubleshoot
 * Downloaded BERT models will not copy vocab.txt in assets folder to the newly created fusion model. This has to be manually copied.
@@ -22,7 +28,7 @@ Also see [catalogue](conf/base/catalog.yml) and [parameters](conf/base/parameter
 
 ## Overview
 
-This is your new Kedro project, which was generated using `Kedro 0.18.1`.
+This is your new Kedro project, which was generated using `Kedro 0.18.4`.
 
 Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
 
