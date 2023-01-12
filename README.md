@@ -2,7 +2,7 @@
 
 [![kedro-tf-text](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/multimodal.drawio.svg)](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/multimodal.drawio.svg)
 
-This is a template for multi-modal machine learning in healthcare using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and image using various fusion methods. It works in [Kubeflow](https://www.kubeflow.org) and in [Vertex AI](https://cloud.google.com/vertex-ai).
+This is a template for multi-modal machine learning in healthcare using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and images using various fusion methods (Early & Late fusion. Few other fusion methods and graph data are WIP). This project works with [Kubeflow](https://www.kubeflow.org) and [Vertex AI](https://cloud.google.com/vertex-ai).
 
 ## Usage
 * If you are not familiar with the [Kedro](https://kedro.org/) platform, please read the [overview](#overview) below.
