@@ -1,5 +1,7 @@
 # Kedro TF Multimodal :hammer:
 
+[![kedro-tf-text](https://github.com/dermatologist/kedro-tf-multimodal/blob/develop/notes/multimodal.drawio.svg)](https://github.com/dermatologist/kedro-tf-multimodal/blob/develop/notes/multimodal.drawio.svg)
+
 This is a template for multi-modal machine learning in healthcare using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and image using various fusion methods. It works in [Kubeflow](https://www.kubeflow.org) and in [Vertex AI](https://cloud.google.com/vertex-ai). **Refer [default pipeline](src/kedro_tf_multimodal/pipelines/train/pipeline.py) for usage examples.** The required pipelines below are in [requirements.txt](src/requirements.txt). More details on the components are in their respective repositories below:
 
 * [kedro-tf-image](https://github.com/dermatologist/kedro-tf-image)
