@@ -6,6 +6,7 @@ This is a template for multi-modal machine learning in healthcare using the [Ked
 
 ## Usage
 * If you are not familiar with the [Kedro](https://kedro.org/) platform, please read the [overview](#overview) below.
+* Fork this Repository and use it as a [Kedro project.](https://kedro.readthedocs.io/en/stable/get_started/new_project.html)
 * Refer [default pipeline](src/kedro_tf_multimodal/pipelines/train/pipeline.py) for usage examples.
 * Refer [sample data](/data/01_raw/) for data format.
 * Refer [catalogue](conf/base/catalog.yml) for inputs and outputs
