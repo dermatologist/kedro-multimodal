@@ -56,3 +56,19 @@ trained_model:
 datasetinmemory:
   type: MemoryDataSet
   copy_mode: assign
+
+processed_text:
+  type: pickle.PickleDataSet
+  filepath: data/03_primary/processed-text.pkl
+
+glove_embedding:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/glove-embedding.pkl
+
+word2vec_embedding:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/word2vec-embedding.pkl
+  
+cnn_text_model:
+  type: tensorflow.TensorFlowModelDataset
+  filepath: data/07_model_output/cnn_text_model
