@@ -6,9 +6,10 @@ This is a template for multi-modal machine learning in healthcare using the [Ked
 
 ## Usage
 * If you are not familiar with the [Kedro](https://kedro.org/) platform, please read the [overview](#overview) below.
-* Fork this Repository and use it as a [Kedro project.](https://kedro.readthedocs.io/en/stable/get_started/new_project.html)
+* Create a Repository from this template and use it as a [Kedro project.](https://kedro.readthedocs.io/en/stable/get_started/new_project.html)
+* Install dependenties ``` pip install -r src/requirements.lock ```
 * Refer [default pipeline](src/kedro_tf_multimodal/pipelines/train/pipeline.py) for usage examples.
-* Refer [sample data](/data/01_raw/) for data format. Prefix model datasets with appropriate model type from image_ , text_ , tabular_ , and bert_
+* Refer [sample data](/data/01_raw/) for data format. Prefix model datasets with appropriate model type from image_ , text_ , tabular_ , and bert_. (text_ is for cnn_text models)
 * Refer [catalogue](conf/base/catalog.yml) for inputs and outputs
 * See [parameters](conf/base/parameters/train.yml) that can be tweaked.
 
@@ -16,6 +17,10 @@ The required pipelines are in [requirements.txt](src/requirements.txt). More det
 * [kedro-tf-image](https://github.com/dermatologist/kedro-tf-image)
 * [kedro-tf-text](https://github.com/dermatologist/kedro-tf-text)
 * [kedro-tf-utils](https://github.com/dermatologist/kedro-tf-utils)
+
+## Features
+* Use any number/combination of data type.
+* Export trained fusion model for TF serving with an additional signatureDef for receiving image as b64 string. Use SERVING: path/to/save/model in [parameters](conf/base/parameters/train.yml). Also see [serving.py](serving.py) (example serving REST client) and [serving.sh](serving.sh) (start TF serving docker container with the model)
 
 ## You can visualize pipelines using [kedro-viz](https://github.com/kedro-org/kedro-viz). See the default pipeline below.
 * Please note that you can build any multi-modal architecture!
