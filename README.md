@@ -2,7 +2,7 @@
 
 [![kedro-tf-text](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/multimodal.drawio.svg)](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/multimodal.drawio.svg)
 
-This is a template for multi-modal machine learning in healthcare using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and images using various fusion methods (Early & Late fusion. Few other fusion methods and graph data are WIP). This project works with [Kubeflow](https://www.kubeflow.org) and [Vertex AI](https://cloud.google.com/vertex-ai).
+This is a template for **multi-modal machine learning in healthcare** using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and images using various fusion methods (Early & Late fusion. Few other fusion methods and graph data are WIP). This project works with [Kubeflow](https://www.kubeflow.org) and [Vertex AI](https://cloud.google.com/vertex-ai).
 
 ## Usage
 * If you are not familiar with the [Kedro](https://kedro.org/) platform, please read the [overview](#overview) below.
@@ -17,10 +17,12 @@ The required pipelines are in [requirements.txt](src/requirements.txt). More det
 * [kedro-tf-image](https://github.com/dermatologist/kedro-tf-image)
 * [kedro-tf-text](https://github.com/dermatologist/kedro-tf-text)
 * [kedro-tf-utils](https://github.com/dermatologist/kedro-tf-utils)
+* [kedro-dicom](https://github.com/dermatologist/kedro-dicom) (*optional*) for processing DICOM images
 
 ## Features
-* Use any number/combination of data type.
-* Export trained fusion model for TF serving with an additional signatureDef for receiving image as b64 string. Use SERVING: path/to/save/model in [parameters](conf/base/parameters/train.yml). Also see [serving.py](serving.py) (example serving REST client) and [serving.sh](serving.sh) (start TF serving docker container with the model)
+* Use any number/combination of data types.
+* Export trained fusion model for TF serving with an additional signatureDef for receiving image as b64 string. Use SERVING: path/to/save/model in [parameters](conf/base/parameters/train.yml). Also see [serving.py](serving.py) (example serving REST client) and [serving.sh](serving.sh) (start TF serving docker container with the model).
+* Experimental support for **BERT** models with some [caveats.](#troubleshoot)
 
 ## You can visualize pipelines using [kedro-viz](https://github.com/kedro-org/kedro-viz). See the default pipeline below.
 * Please note that you can build any multi-modal architecture!
