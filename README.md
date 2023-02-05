@@ -18,6 +18,7 @@ The required pipelines are in [requirements.txt](src/requirements.txt). More det
 * [kedro-tf-text](https://github.com/dermatologist/kedro-tf-text)
 * [kedro-tf-utils](https://github.com/dermatologist/kedro-tf-utils)
 * [kedro-dicom](https://github.com/dermatologist/kedro-dicom) (*optional*) for processing DICOM images
+* [kedro-graph](https://github.com/dermatologist/kedro-graph) (*optional*) for creating [DGL](https://www.dgl.ai/) graph from multimodal data.
 
 ## Features
 * Use any number/combination of data types.
