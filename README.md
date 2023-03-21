@@ -1,24 +1,25 @@
-# Kedro TF Multimodal :hammer:
+# Kedro TF Multimodal :hammer: [Template]
 
 [![kedro-tf-text](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/multimodal.drawio.svg)](https://github.com/dermatologist/kedro-multimodal/blob/develop/notes/multimodal.drawio.svg)
 
-This is a template for **multi-modal machine learning in healthcare** using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and images using various fusion methods (Early & Late fusion. Few other fusion methods and graph data are WIP). This project works with [Kubeflow](https://www.kubeflow.org) and [Vertex AI](https://cloud.google.com/vertex-ai).
+This is a *template* for **multi-modal machine learning in healthcare** using the [Kedro](https://kedro.org/) framework. You can combine reports, tabular data and images using various fusion methods (Early & Late fusion. Few other fusion methods and graph data are WIP). This project works with [Kubeflow](https://www.kubeflow.org) and [Vertex AI](https://cloud.google.com/vertex-ai).
 
 ## Usage
-* If you are not familiar with the [Kedro](https://kedro.org/) platform, please read the [overview](#overview) below.
-* Create a Repository from this template and use it as a [Kedro project.](https://kedro.readthedocs.io/en/stable/get_started/new_project.html)
+* If you are not familiar with the [Kedro](https://kedro.org/) platform, please read the [overview](#overview) :point_down:
+* This is a template repository. Generate a new repository with the same directory structure by clicking the **Use this template** button :point_up: and use it as a [Kedro project.](https://kedro.readthedocs.io/en/stable/get_started/new_project.html)
 * Install dependenties ``` pip install -r src/requirements.lock ```
 * Refer [default pipeline](src/kedro_tf_multimodal/pipelines/train/pipeline.py) for usage examples.
-* Refer [sample data](/data/01_raw/) for data format. Prefix model datasets with appropriate model type from image_ , text_ , tabular_ , and bert_. (text_ is for cnn_text models)
+* Refer [sample data](/data/01_raw/) for data format. Prefix model datasets with appropriate model type from image_ , text_ , tabular_ , and bert_. (text_ is for CNN text models)
 * Refer [catalogue](conf/base/catalog.yml) for inputs and outputs
 * See [parameters](conf/base/parameters/train.yml) that can be tweaked.
 
-The required pipelines are in [requirements.txt](src/requirements.txt). More details on the components are in their respective repositories:
+The required pipelines are in [requirements.txt](src/requirements.txt). More details on the components are in their respective repositories :point_down: (PR welcome. Read CONTRIBUTING.md in the repositories)
 * [kedro-tf-image](https://github.com/dermatologist/kedro-tf-image)
 * [kedro-tf-text](https://github.com/dermatologist/kedro-tf-text)
 * [kedro-tf-utils](https://github.com/dermatologist/kedro-tf-utils)
 * [kedro-dicom](https://github.com/dermatologist/kedro-dicom) (*optional*) for processing DICOM images
 * [kedro-graph](https://github.com/dermatologist/kedro-graph) (*optional*) for creating [DGL](https://www.dgl.ai/) graph from multimodal data.
+* [fhiry](https://github.com/dermatologist/fhiry) (*optional*) for flattening [FHIR resources](https://www.hl7.org/fhir/overview.html).
 
 ## Features
 * Use any number/combination of data types.
