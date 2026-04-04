@@ -4,7 +4,7 @@ ipython
 isort
 jupyter
 jupyterlab
-kedro==0.18.4
+kedro==1.3.0
 nbstripout
 pytest-cov
 pytest-mock
